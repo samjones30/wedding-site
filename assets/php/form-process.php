@@ -16,13 +16,26 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
-// MSG SUBJECT
-if (empty($_POST["msg_subject"])) {
-    $errorMSG .= "Subject is required ";
+// ADDITIONAL GUESTS
+if (!empty($_POST["guests"])) {
+    $guests = $_POST["guests"];
 } else {
-    $msg_subject = $_POST["msg_subject"];
+    $song = "No additional guests";
 }
 
+// ACCOMODATION
+if (empty($_POST["accomodation"])) {
+    $errorMSG .= "Accomodation choice is required ";
+} else {
+    $accomodation = $_POST["accomodation"];
+}
+
+// SONG
+if (!empty($_POST["song"])) {
+    $song = $_POST["song"];
+} else {
+    $song = "No song chosen";
+}
 
 // MESSAGE
 if (empty($_POST["message"])) {
@@ -30,7 +43,6 @@ if (empty($_POST["message"])) {
 } else {
     $message = $_POST["message"];
 }
-
 
 $EmailTo = "jesshugill2@gmail.com";
 $Subject = "Wedding RSVP";
@@ -46,7 +58,13 @@ $Body .= "\n";
 $Body .= "Subject: ";
 $Body .= $msg_subject;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "RSVP: ";
+$Body .= $guests;
+$Body .= "\n";
+$Body .= $accomodation;
+$Body .= "\n";
+$Body .= $song;
+$Body .= "\n";
 $Body .= $message;
 $Body .= "\n";
 
