@@ -44,7 +44,7 @@ if (empty($_POST["message"])) {
     $message = $_POST["message"];
 }
 
-$EmailTo = "sam.jones3535@gmail.com";
+$EmailTo = "jesshugill2@gmail.com";
 $Subject = "Wedding RSVP";
 
 // prepare email body text
