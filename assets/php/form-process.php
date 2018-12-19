@@ -55,9 +55,6 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $msg_subject;
-$Body .= "\n";
 $Body .= "Additional guests?: ";
 $Body .= $guests;
 $Body .= "\n";
@@ -85,15 +82,15 @@ if ($success && $errorMSG == ""){
    //Set Refresh header using PHP.
     header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
  
-   echo "RSVP submitted, you will be redirected to the home page.";
+   echo "RSVP submitted, you will be redirected to the home page after 5 seconds.";
    
 }else{
     if($errorMSG == ""){
         header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
-        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page.";
+        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page after 5 seconds.";
     } else {
         header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
-        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page.";
+        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page after 5 seconds.";
         echo $errorMSG;
     }
 }
