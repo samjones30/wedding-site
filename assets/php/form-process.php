@@ -58,13 +58,16 @@ $Body .= "\n";
 $Body .= "Subject: ";
 $Body .= $msg_subject;
 $Body .= "\n";
-$Body .= "RSVP: ";
+$Body .= "Additional guests?: ";
 $Body .= $guests;
 $Body .= "\n";
+$Body .= "Accomodation Request: ";
 $Body .= $accomodation;
 $Body .= "\n";
+$Body .= "Song: ";
 $Body .= $song;
 $Body .= "\n";
+$Body .= "Additional Message: ";
 $Body .= $message;
 $Body .= "\n";
 
@@ -79,11 +82,18 @@ $success = @mail($EmailTo, $Subject, $Body, "From:".$email);
  
 // redirect to success page
 if ($success && $errorMSG == ""){
-   echo "success";
+   //Set Refresh header using PHP.
+    header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
+ 
+   echo "RSVP submitted, you will be redirected to the home page.";
+   
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
+        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page.";
     } else {
+        header( "refresh:5;url=http://www.sipsiphooray.co.uk/" );
+        echo "Something went wrong :( Sam must have coded a crap website, redirecting to home page.";
         echo $errorMSG;
     }
 }
