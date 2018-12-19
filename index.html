@@ -269,11 +269,11 @@
 				<div id="add_guests" class="row">
 					<div class="col-md-12">
 						<label>Additional Guests</label>
-						<input type="text" class="form-control" id="guests" name="guests" required data-error="Please enter additional guests names">
+						<input type="text" class="form-control" id="guests" name="guests">
 						<div class="help-block with-errors"></div>
 					</div>
 				</div>		  
-				<div id="accomodation" class="row">
+				<div id="accomodation_radio" class="row">
 					<label>Accomodation</label>	
 					<div class="col-md-8">
 						<input type="radio" name="accomodation" id="accomodation-none" value="None" /> None 
@@ -357,7 +357,7 @@
 	<script>
 	document.getElementById('btnYesRSVP').onclick = function() {
 		document.getElementById("mainForm").style.visibility = "visible";
-		document.getElementById("accomodation").style.visibility = "visible";
+		document.getElementById("accomodation_radio").style.visibility = "visible";
 		document.getElementById("add_guests").style.visibility = "visible";
 		document.getElementById("fav_song").style.visibility = "visible";
 	};
@@ -365,7 +365,7 @@
 	<script>
 	document.getElementById('btnNoRSVP').onclick = function() {
 		document.getElementById("mainForm").style.visibility = "visible";
-		document.getElementById("accomodation").style.visibility = "collapse";
+		document.getElementById("accomodation_radio").style.visibility = "collapse";
 		document.getElementById("add_guests").style.visibility = "collapse";
 		document.getElementById("fav_song").style.visibility = "collapse";
 	};
