@@ -1118,7 +1118,6 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 /* Contact Forme */
 #google-map-area {
-  overflow: auto;
   background-color: #f2f2f2;
   position: relative;
   margin-left: auto;
